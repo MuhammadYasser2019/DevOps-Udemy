@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>Linux Plus Information Muhammad's update</h1>
+    <h1>This is the final update</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
