@@ -1,0 +1,4 @@
+This project should be run on the foundation machine and there is a dir called pipeline that should be copied on the workstation 
+
+
+and the sudoers file here is a reference for you to consider jenkins as root 

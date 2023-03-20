@@ -1,0 +1,17 @@
+---
+- name: This is the playbook for creating new image
+  hosts: localhost
+  # become: true
+  tasks:
+    - name: bulding image 
+      command: "podman build -t tomcat:latest ."
+      args:
+        chdir: /home/student/pipeline/
+
+    - name: tagging image
+      command: "podman tag localhost/tomcat:latest docker.io/muhammadyasser/tomcat:latest"
+    
+    
+    - name: pushing the image 
+      command: "podman push docker.io/muhammadyasser/tomcat:latest"
+ 
