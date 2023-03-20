@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>This is the final update from Linux Plus version two</h1>
+    <h1>This is the final update from Linux Plus version third one</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
      
