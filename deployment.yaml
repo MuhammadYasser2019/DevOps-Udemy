@@ -1,9 +1,10 @@
+---
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
   name: valaxy-regapp
   labels: 
-     app: regapp
+    app: regapp
 
 spec:
   replicas: 2 
@@ -18,7 +19,7 @@ spec:
     spec:
       containers:
       - name: regapp
-        image: valaxy/regapp
+        image: docker.io/muhammadyasser/tomcat:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -27,3 +28,20 @@ spec:
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: valaxy-service
+  labels:
+    app: regapp 
+spec:
+  selector:
+    app: regapp 
+
+  ports:
+    - port: 8080
+      targetPort: 8080
+
+  type: NodePort
